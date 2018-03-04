@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_ui_policy">
+    <sys_ui_policy action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <conditions table="x_58872_needit_needit">state=14^EQ<item endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="14"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </conditions>
+        <description/>
+        <global>true</global>
+        <inherit>false</inherit>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>100</order>
+        <reverse_if_false>true</reverse_if_false>
+        <run_scripts>true</run_scripts>
+        <script_false><![CDATA[function onCondition() {
+	    // Clear the field message written by the Execute if true script for the Other field
+		g_form.hideFieldMsg('u_pending_reason',true);
+	}]]></script_false>
+        <script_true><![CDATA[function onCondition() {
+g_form.showFieldMsg('u_pending_reason','Please explain why the Sate is set as pending.','info');
+}]]></script_true>
+        <set_values/>
+        <short_description>Pending reason when state is pending</short_description>
+        <sys_class_name>sys_ui_policy</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-03-01 09:55:27</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>97b68ec24f601300f5514e318110c7a3</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Pending reason when state is pending</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_ui_policy_97b68ec24f601300f5514e318110c7a3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-03-03 07:26:47</sys_updated_on>
+        <table>x_58872_needit_needit</table>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_ui_policy>
+</record_update>
